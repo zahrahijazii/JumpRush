@@ -28,6 +28,10 @@ export function updateAstro(delta, speedScale){
     handleJump(delta);
 }
 
+export function getAstroRect(){
+    return astroElem.getBoundingClientRect();
+}
+
 
 function handleRun(delta, speedScale){
     if(isJumping){ // astronaut when jumping animation

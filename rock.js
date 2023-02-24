@@ -27,6 +27,12 @@ export function updateRock(delta, speedScale){ // create rocks on the screen
     }
     nextRockTime -= delta; // this makes the nextRockTime smaller and below zero so we can create a new rock
 }
+export function getRockRects(){
+    return [...document.querySelectorAll("[data-rock]")].map(rock => 
+        {
+            return rock.getBoundingClientRect(); 
+        });       
+}
 
 function createRock(){
     const rock = document.createElement("img");
