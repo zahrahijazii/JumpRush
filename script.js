@@ -1,5 +1,6 @@
 import {setupGround, updateGround} from "./ground.js";
 import {setupAstro, updateAstro} from "./astronaut.js";
+import {setupRock, updateRock} from "./rock.js";
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
 const scoreElem=document.querySelector("[data-score]");
@@ -24,6 +25,7 @@ function update(time){
     const delta = time - lastTime;
     updateGround(delta, speedScale);
     updateAstro(delta, speedScale);
+    updateRock(delta, speedScale);
     updateSpeedScale(delta);
     updateScore(delta);
     
@@ -38,6 +40,7 @@ function handleStart(){
     score = 0;
     setupGround();
     setupAstro();
+    setupRock();
     startScreenElem.classList.add("hide");
     window.requestAnimationFrame(update);
 }

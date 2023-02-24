@@ -56,6 +56,6 @@ body{
 .rock{
     position: absolute;
     height: 30%;
-    left: calc(var(--bottom) * 1%);
+    left: calc(var(--left) * 1%);
     bottom: 0;
 }
